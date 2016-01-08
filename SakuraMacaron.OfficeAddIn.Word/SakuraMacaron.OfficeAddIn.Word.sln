@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SakuraMacaron.OfficeAddIn.Word", "SakuraMacaron.OfficeAddIn.Word\SakuraMacaron.OfficeAddIn.Word.vbproj", "{4581FEAA-FB91-438A-92D9-0878AB31DE17}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Sample.WordAddIn", "Sample.WordAddIn\Sample.WordAddIn.vbproj", "{8AADF824-0042-4D8B-9887-F8599A3D94E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{835CED84-E11D-4169-A79C-DCC4E3B1DD7C}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SakuraMacaron.Core", "..\SakuraMacaron.Core\SakuraMacaron.Core\SakuraMacaron.Core.vbproj", "{DF2E20E1-9015-4D8D-9972-90374CADD658}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SakuraMacaron.OfficeAddIn", "..\SakuraMacaron.OfficeAddIn\SakuraMacaron.OfficeAddIn\SakuraMacaron.OfficeAddIn.vbproj", "{D2290C45-D9EB-4325-9959-9FBD2011FFAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4581FEAA-FB91-438A-92D9-0878AB31DE17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4581FEAA-FB91-438A-92D9-0878AB31DE17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4581FEAA-FB91-438A-92D9-0878AB31DE17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4581FEAA-FB91-438A-92D9-0878AB31DE17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AADF824-0042-4D8B-9887-F8599A3D94E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AADF824-0042-4D8B-9887-F8599A3D94E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AADF824-0042-4D8B-9887-F8599A3D94E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AADF824-0042-4D8B-9887-F8599A3D94E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF2E20E1-9015-4D8D-9972-90374CADD658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF2E20E1-9015-4D8D-9972-90374CADD658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF2E20E1-9015-4D8D-9972-90374CADD658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF2E20E1-9015-4D8D-9972-90374CADD658}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2290C45-D9EB-4325-9959-9FBD2011FFAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2290C45-D9EB-4325-9959-9FBD2011FFAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2290C45-D9EB-4325-9959-9FBD2011FFAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2290C45-D9EB-4325-9959-9FBD2011FFAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DF2E20E1-9015-4D8D-9972-90374CADD658} = {835CED84-E11D-4169-A79C-DCC4E3B1DD7C}
+		{D2290C45-D9EB-4325-9959-9FBD2011FFAD} = {835CED84-E11D-4169-A79C-DCC4E3B1DD7C}
+	EndGlobalSection
+EndGlobal

@@ -10,4 +10,12 @@
 
     Public Property InsertAfterText As String
 
+
+    Public Property IsBox As Boolean
+
+    Public Property RowIndex As Integer
+
+    Public Property ColumnIndex As Integer
+
+
 End Class

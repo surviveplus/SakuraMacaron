@@ -9,7 +9,9 @@ Public Class ExcelMacaron
 #Region " Macaron members "
 
     Public Overrides Sub ReplaceSelectionParagraphs(prepare As Action(Of TextActionsParameters), act As Action(Of TextActionsParameters))
+
         Throw New NotImplementedException()
+
     End Sub
 
     Public Overrides Sub ReplaceSelectionText(prepare As Action(Of TextActionsParameters), act As Action(Of TextActionsParameters))
@@ -22,8 +24,8 @@ Public Class ExcelMacaron
             End Function
 
         Dim setText =
-            Sub(cell As Range, text As String)
-                cell.Formula = text
+            Sub(cell As Range, a As TextActionsParameters)
+                cell.Formula = a.InsertBeforeText & a.Text & a.InsertAfterText
             End Sub
 
         Dim r = ForEachRange(target, prepare, getText, Nothing)
@@ -56,7 +58,7 @@ Public Class ExcelMacaron
         target As Range,
         act As Action(Of TextActionsParameters),
         getText As Func(Of Range, String),
-        setText As Action(Of Range, String)
+        setText As Action(Of Range, TextActionsParameters)
         ) As ExecuteSelectionResult
 
         If target Is Nothing Then Throw New ArgumentNullException("target")
@@ -64,11 +66,17 @@ Public Class ExcelMacaron
 
         If target.Count = 1 Then
             Dim a As New TextActionsParameters
-            a.Text = getText(target)
+            Dim text = getText(target)
+            a.Text = text
             act(a)
             If a.IsCanceled Then Return New ExecuteSelectionResult With {.IsCanceld = True}
             If setText IsNot Nothing AndAlso a.IsSkipped = False Then
-                setText(target, a.Text)
+                If text <> a.Text OrElse
+                            String.IsNullOrEmpty(a.InsertBeforeText) = False OrElse
+                            String.IsNullOrEmpty(a.InsertAfterText) = False Then
+
+                    setText(target, a)
+                End If
             End If
         Else
             If target.Rows.Count * target.Columns.Count <> target.Count Then
@@ -79,11 +87,17 @@ Public Class ExcelMacaron
                         .IsBox = False,
                         .RowIndex = 1, .ColumnIndex = c
                     }
-                    a.Text = getText(item)
+                    Dim text = getText(item)
+                    a.Text = text
                     act(a)
                     If a.IsCanceled Then Return New ExecuteSelectionResult With {.IsCanceld = True}
                     If setText IsNot Nothing AndAlso a.IsSkipped = False Then
-                        setText(item, a.Text)
+                        If text <> a.Text OrElse
+                            String.IsNullOrEmpty(a.InsertBeforeText) = False OrElse
+                            String.IsNullOrEmpty(a.InsertAfterText) = False Then
+
+                            setText(item, a)
+                        End If
                     End If
                     c += 1
                 Next item
@@ -95,11 +109,17 @@ Public Class ExcelMacaron
                         Dim a As New TextActionsParameters With {
                             .IsBox = True,
                             .RowIndex = r, .ColumnIndex = c}
-                        a.Text = getText(item)
+                        Dim text = getText(item)
+                        a.Text = text
                         act(a)
                         If a.IsCanceled Then Return New ExecuteSelectionResult With {.IsCanceld = True}
                         If setText IsNot Nothing AndAlso a.IsSkipped = False Then
-                            setText(item, a.Text)
+                            If text <> a.Text OrElse
+                            String.IsNullOrEmpty(a.InsertBeforeText) = False OrElse
+                            String.IsNullOrEmpty(a.InsertAfterText) = False Then
+
+                                setText(item, a)
+                            End If
                         End If
 
                     Next c

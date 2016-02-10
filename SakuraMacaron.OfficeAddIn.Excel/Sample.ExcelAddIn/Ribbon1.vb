@@ -22,7 +22,9 @@ Public Class Ribbon1
 
                         End Sub,
                         Sub(a)
-                            a.Text = a.Text & "TEST"
+                            a.Text = "(" & a.Text & ")"
+                            a.InsertBeforeText = "[["
+                            a.InsertAfterText = "]]"
                         End Sub
                     )
 

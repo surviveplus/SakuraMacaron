@@ -1,4 +1,5 @@
-﻿Imports Microsoft.Office.Interop.Excel
+﻿Imports System.Text
+Imports Microsoft.Office.Interop.Excel
 Imports Net.Surviveplus.SakuraMacaron.Core
 
 Public Class ExcelMacaron
@@ -10,7 +11,63 @@ Public Class ExcelMacaron
 
     Public Overrides Sub ReplaceSelectionParagraphs(prepare As Action(Of TextActionsParameters), act As Action(Of TextActionsParameters))
 
-        Throw New NotImplementedException()
+        Dim prepareAllLines =
+            Sub(a As TextActionsParameters)
+
+                If a.Text.Contains(vbLf) Then
+                    For Each line In a.Text.Split(vbLf)
+                        Dim aPerLine As New TextActionsParameters With {.Text = line, .IsBox = a.IsBox, .ColumnIndex = a.ColumnIndex, .RowIndex = a.RowIndex}
+                        prepare(aPerLine)
+                        If aPerLine.IsCanceled Then
+                            a.IsCanceled = True
+                            Exit Sub
+                        End If
+                    Next
+                Else
+                    prepare(a)
+                End If
+            End Sub
+
+        Dim actAllLines =
+            Sub(a As TextActionsParameters)
+
+                If a.Text.Contains(vbLf) Then
+                    Dim newText As New List(Of String)
+                    For Each line In a.Text.Split(vbLf)
+                        Dim aPerLine As New TextActionsParameters With {.Text = line, .IsBox = a.IsBox, .ColumnIndex = a.ColumnIndex, .RowIndex = a.RowIndex}
+                        act(aPerLine)
+                        If aPerLine.IsCanceled Then
+                            a.IsCanceled = True
+                            Exit Sub
+                        Else
+                            If aPerLine.IsSkipped Then
+                                newText.Add(line)
+                            Else
+                                newText.Add(aPerLine.InsertBeforeText & aPerLine.Text & aPerLine.InsertAfterText)
+                            End If
+                        End If
+                    Next
+                    a.Text = String.Join(vbLf, newText)
+                Else
+                    act(a)
+                End If
+            End Sub
+
+        Dim target As Range = Me.app.Selection
+
+        Dim getText =
+            Function(cell As Range) As String
+                Return cell.Formula
+            End Function
+
+        Dim setText =
+            Sub(cell As Range, a As TextActionsParameters)
+                cell.Formula = a.InsertBeforeText & a.Text & a.InsertAfterText
+            End Sub
+
+        Dim r = ForEachRange(target, prepareAllLines, getText, Nothing)
+        If r.IsCanceld = False Then ForEachRange(target, actAllLines, getText, setText)
+
 
     End Sub
 

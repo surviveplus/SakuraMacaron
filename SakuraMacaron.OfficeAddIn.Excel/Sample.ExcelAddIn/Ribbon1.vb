@@ -17,18 +17,22 @@ Public Class Ribbon1
                 Sub(sender2, e2)
 
                     Dim macaron = New ExcelMacaron(ThisAddIn.Current.Application)
-                    macaron.ReplaceSelectionText(
+                    'macaron.ReplaceSelectionText(
+                    macaron.ReplaceSelectionParagraphs(
                         Sub(a)
 
                         End Sub,
                         Sub(a)
+                            If String.IsNullOrEmpty(a.Text) Then
+                                a.IsSkipped = True
+                                Exit Sub
+                            End If
+
                             a.Text = "(" & a.Text & ")"
                             a.InsertBeforeText = "[["
                             a.InsertAfterText = "]]"
                         End Sub
                     )
-
-
 
                 End Sub
 

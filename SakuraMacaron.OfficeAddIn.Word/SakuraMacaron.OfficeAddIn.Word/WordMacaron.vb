@@ -20,7 +20,7 @@ Public Class WordMacaron
                 Dim text = r.Text
                 If text Is Nothing Then text = String.Empty
 
-                Dim a As New TextActionsParameters With {.Text = text}
+                Dim a As New TextActionsParameters With {.text = text}
                 prepare(a)
                 If a.IsCanceled Then Exit Sub
             Next
@@ -35,7 +35,7 @@ Public Class WordMacaron
             Dim text = r.Text
             If text Is Nothing Then text = String.Empty
 
-            Dim a As New TextActionsParameters With {.Text = text}
+            Dim a As New TextActionsParameters With {.text = text}
             act(a)
             If a.IsCanceled Then Exit Sub
             If a.IsSkipped = False Then
@@ -60,7 +60,7 @@ Public Class WordMacaron
                 Dim text = r.Text
                 If text Is Nothing Then text = String.Empty
 
-                Dim a As New TextActionsParameters With {.Text = text}
+                Dim a As New TextActionsParameters With {.text = text}
                 prepare(a)
                 If a.IsCanceled Then Exit Sub
             Next
@@ -75,7 +75,7 @@ Public Class WordMacaron
             Dim text = r.Text
             If text Is Nothing Then text = String.Empty
 
-            Dim a As New TextActionsParameters With {.Text = text}
+            Dim a As New TextActionsParameters With {.text = text}
             act(a)
             If a.IsCanceled Then Exit Sub
             If a.IsSkipped = False Then
@@ -106,15 +106,21 @@ Public Class WordMacaron
     End Sub
 
     Private app As Application
+    Protected Sub New()
+    End Sub
 
 #End Region
+
+    Protected Overridable Function GetSelection() As Selection
+        Return Me.app.Selection
+    End Function
 
 #Region " Properties "
 
     Public ReadOnly Property SelectedTextRanges As IEnumerable(Of Range)
         Get
-            Dim r = (From shape As Shape In Me.app.Selection?.ShapeRange Select shape.TextFrame?.TextRange).ToArray()
-            If r.Count = 0 Then r = {Me.app.Selection?.Range}
+            Dim r = (From shape As Shape In Me.GetSelection()?.ShapeRange Select shape.TextFrame?.TextRange).ToArray()
+            If r.Count = 0 Then r = {Me.GetSelection()?.Range}
 
             Return r
         End Get
@@ -123,13 +129,13 @@ Public Class WordMacaron
     Public ReadOnly Property SelectedParagraphsRanges As IEnumerable(Of Range)
         Get
             Dim r = (
-                From shape As Shape In (From s In Me.app.Selection?.ShapeRange).ToArray()
+                From shape As Shape In (From s In Me.GetSelection()?.ShapeRange).ToArray()
                 From line As Range In (
                         From p As Paragraph In shape.TextFrame.TextRange.Paragraphs
                         Select p.Range).ToArray()
                 Select line).ToArray()
 
-            If r.Count = 0 Then r = (From p As Paragraph In Me.app.Selection?.Paragraphs Select p.Range).ToArray()
+            If r.Count = 0 Then r = (From p As Paragraph In Me.GetSelection()?.Paragraphs Select p.Range).ToArray()
 
             Return r
         End Get

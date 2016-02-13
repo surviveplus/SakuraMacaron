@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SakuraMacaron.OfficeAddIn.Outlook", "SakuraMacaron.OfficeAddIn.Outlook\SakuraMacaron.OfficeAddIn.Outlook.vbproj", "{5EF8E72B-3DA0-4C35-AD40-C0DE6AF2ACA4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{0848E373-9D73-4F4C-9CA6-FFCC2FD381F9}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SakuraMacaron.Core", "..\SakuraMacaron.Core\SakuraMacaron.Core\SakuraMacaron.Core.vbproj", "{DF2E20E1-9015-4D8D-9972-90374CADD658}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SakuraMacaron.OfficeAddIn", "..\SakuraMacaron.OfficeAddIn\SakuraMacaron.OfficeAddIn\SakuraMacaron.OfficeAddIn.vbproj", "{D2290C45-D9EB-4325-9959-9FBD2011FFAD}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SakuraMacaron.OfficeAddIn.Word", "..\SakuraMacaron.OfficeAddIn.Word\SakuraMacaron.OfficeAddIn.Word\SakuraMacaron.OfficeAddIn.Word.vbproj", "{4581FEAA-FB91-438A-92D9-0878AB31DE17}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Sample.OutlookAddIn", "Sample.OutlookAddIn\Sample.OutlookAddIn.vbproj", "{49FD839F-46D3-4461-B6FA-850E9EBCEB20}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EF8E72B-3DA0-4C35-AD40-C0DE6AF2ACA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EF8E72B-3DA0-4C35-AD40-C0DE6AF2ACA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EF8E72B-3DA0-4C35-AD40-C0DE6AF2ACA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EF8E72B-3DA0-4C35-AD40-C0DE6AF2ACA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF2E20E1-9015-4D8D-9972-90374CADD658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF2E20E1-9015-4D8D-9972-90374CADD658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF2E20E1-9015-4D8D-9972-90374CADD658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF2E20E1-9015-4D8D-9972-90374CADD658}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2290C45-D9EB-4325-9959-9FBD2011FFAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2290C45-D9EB-4325-9959-9FBD2011FFAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2290C45-D9EB-4325-9959-9FBD2011FFAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2290C45-D9EB-4325-9959-9FBD2011FFAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4581FEAA-FB91-438A-92D9-0878AB31DE17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4581FEAA-FB91-438A-92D9-0878AB31DE17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4581FEAA-FB91-438A-92D9-0878AB31DE17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4581FEAA-FB91-438A-92D9-0878AB31DE17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49FD839F-46D3-4461-B6FA-850E9EBCEB20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49FD839F-46D3-4461-B6FA-850E9EBCEB20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49FD839F-46D3-4461-B6FA-850E9EBCEB20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49FD839F-46D3-4461-B6FA-850E9EBCEB20}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DF2E20E1-9015-4D8D-9972-90374CADD658} = {0848E373-9D73-4F4C-9CA6-FFCC2FD381F9}
+		{D2290C45-D9EB-4325-9959-9FBD2011FFAD} = {0848E373-9D73-4F4C-9CA6-FFCC2FD381F9}
+		{4581FEAA-FB91-438A-92D9-0878AB31DE17} = {0848E373-9D73-4F4C-9CA6-FFCC2FD381F9}
+	EndGlobalSection
+EndGlobal

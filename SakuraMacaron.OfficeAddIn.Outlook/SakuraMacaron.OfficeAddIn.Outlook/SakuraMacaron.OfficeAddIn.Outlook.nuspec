@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+ <metadata>
+   <id>SakuraMacaron.OfficeAddIn.Outlook</id>
+   <title>SakuraMacaron for Outlook AddIn(VSTO)</title>
+   <version>1.0.0-bata1</version>
+   <authors>Surviveplus.net</authors>
+   <description>Framework to create application extensions and macro.</description>
+   <language>en-US</language>
+  <projectUrl>https://github.com/surviveplus/SakuraMacaron</projectUrl>
+    <!--<licenseUrl></licenseUrl>-->
+   <iconUrl>http://surviveplus.net/images/SakuraMacaron.png</iconUrl>
+   <copyright>Copyright ©  2016 SHIN-ICHI (Surviveplus.net)</copyright>
+   <dependencies>
+
+   </dependencies>
+ </metadata>
+<files>
+  <file src="bin\Release\SakuraMacaron.Core.dll" target="lib\net46"/>
+  <file src="bin\Release\SakuraMacaron.Core.xml" target="lib\net46"/>
+  <file src="bin\Release\SakuraMacaron.OfficeAddIn.dll" target="lib\net46"/>
+  <file src="bin\Release\SakuraMacaron.OfficeAddIn.xml" target="lib\net46"/>
+  <file src="bin\Release\SakuraMacaron.OfficeAddIn.Word.dll" target="lib\net46"/>
+  <file src="bin\Release\SakuraMacaron.OfficeAddIn.Word.xml" target="lib\net46"/>
+  <file src="bin\Release\SakuraMacaron.OfficeAddIn.Outlook.dll" target="lib\net46"/>
+  <file src="bin\Release\SakuraMacaron.OfficeAddIn.Outlook.xml" target="lib\net46"/>
+  <!--<file src="bin\Release\ja\SakuraMacaron.OfficeAddIn.Word.xml" target="lib\net46\ja"/>-->
+  <!--<file src="bin\Release\ja\SakuraMacaron.OfficeAddIn.Outlook.xml" target="lib\net46\ja"/>-->
+
+  <!--<file src="readme.txt" target="" />-->
+  <!--<file src="bin\Release\ja\*.dll" target="lib\net45\ja"/>-->
+</files>
+</package>

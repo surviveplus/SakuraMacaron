@@ -23,10 +23,10 @@ Public Class Ribbon1
 
                         End Sub,
                         Sub(a)
-                            If String.IsNullOrEmpty(a.Text) Then
-                                a.IsSkipped = True
-                                Exit Sub
-                            End If
+                            'If String.IsNullOrEmpty(a.Text) Then
+                            '    a.IsSkipped = True
+                            '    Exit Sub
+                            'End If
 
                             a.Text = "(" & a.Text & ")"
                             a.InsertBeforeText = "[["

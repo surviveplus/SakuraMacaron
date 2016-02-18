@@ -13,6 +13,7 @@ Public Class ExcelMacaron
 
         Dim prepareAllLines =
             Sub(a As TextActionsParameters)
+                If prepare Is Nothing Then Return
 
                 If a.Text.Contains(vbLf) Then
                     For Each line In a.Text.Split(vbLf)

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>
+SakuraMacaron.OfficeAddIn.Project
+</name>
+    </assembly>
+    <members>
+        <member name="T:Net.Surviveplus.SakuraMacaron.OfficeAddIn.Project.My.Resources.Resources">
+            <summary>
+  ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+</summary>
+        </member>
+        <member name="P:Net.Surviveplus.SakuraMacaron.OfficeAddIn.Project.My.Resources.Resources.ResourceManager">
+            <summary>
+  このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+</summary>
+        </member>
+        <member name="P:Net.Surviveplus.SakuraMacaron.OfficeAddIn.Project.My.Resources.Resources.Culture">
+            <summary>
+  厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
+  現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+</summary>
+        </member>
+        <member name="T:Net.Surviveplus.SakuraMacaron.OfficeAddIn.Project.NotFoundCustomFieldException">
+            <summary>
+The exception that is thrown when problem occurs.
+ </summary>
+            <remarks>
+                <para>change log</para>
+            </remarks>
+        </member>
+        <member name="M:Net.Surviveplus.SakuraMacaron.OfficeAddIn.Project.NotFoundCustomFieldException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+ Sets the SerializationInfo object with the parameter name and additional exception information.
+ </summary>
+            <param name="info">The object that holds the serialized object data.</param>
+            <param name="context">The contextual information about the source or destination.</param>
+            <remarks></remarks>
+            <exception cref="T:System.ArgumentNullException">The info object is Nothing (a null reference in C#).</exception>
+        </member>
+        <member name="M:Net.Surviveplus.SakuraMacaron.OfficeAddIn.Project.NotFoundCustomFieldException.#ctor">
+            <summary>
+ Initializes a new instance of the NotFoundCustomFieldException class.
+ </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.SakuraMacaron.OfficeAddIn.Project.NotFoundCustomFieldException.#ctor(System.String)">
+            <summary>
+ Initializes a new instance of the NotFoundCustomFieldException class with a specified error message. 
+ </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.SakuraMacaron.OfficeAddIn.Project.NotFoundCustomFieldException.#ctor(System.String,System.Exception)">
+            <summary>
+ Initializes a new instance of the NotFoundCustomFieldException class with a specified error message and a reference to the inner exception that is the cause of this exception.
+ </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception. Set Nothing (a null reference in C#) if the inner exception value was not supplied.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.SakuraMacaron.OfficeAddIn.Project.NotFoundCustomFieldException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+  Initializes a new instance of the NotFoundCustomFieldException class with serialized data.
+ </summary>
+            <param name="info">The object that holds the serialized object data.</param>
+            <param name="context">The contextual information about the source or destination.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.SakuraMacaron.OfficeAddIn.Project.ProjectMacaron.#ctor(Microsoft.Office.Interop.MSProject.Application)">
+            <summary>
+ Initializes a new instance of the class.
+ </summary>
+            <param name="app">Set Application object.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Net.Surviveplus.SakuraMacaron.OfficeAddIn.Project.TaskExtensions.SetCustomFieldValue(Microsoft.Office.Interop.MSProject.Task,System.String,System.String)">
+            <summary>
+ Do something, and return something.
+ </summary>
+            <param name="this">The instance of the type which is added this extension method.</param>
+            <param name="value">Set something.</param>
+            <remarks></remarks>
+        </member>
+    </members>
+</doc>

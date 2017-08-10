@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SakuraMacaron.OfficeAddIn.Project", "SakuraMacaron.OfficeAddIn.Project\SakuraMacaron.OfficeAddIn.Project.vbproj", "{4EB50476-9AE4-477C-B6EA-53A80FF24F46}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{68627445-415E-4C27-9D0E-8E53DBEA756C}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SakuraMacaron.Core", "..\SakuraMacaron.Core\SakuraMacaron.Core\SakuraMacaron.Core.vbproj", "{DF2E20E1-9015-4D8D-9972-90374CADD658}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SakuraMacaron.OfficeAddIn", "..\SakuraMacaron.OfficeAddIn\SakuraMacaron.OfficeAddIn\SakuraMacaron.OfficeAddIn.vbproj", "{D2290C45-D9EB-4325-9959-9FBD2011FFAD}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Sample.ProjectAddIn", "Sample.ProjectAddIn\Sample.ProjectAddIn.vbproj", "{28DE18DC-BEFE-483B-9C94-4C637D43D3C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4EB50476-9AE4-477C-B6EA-53A80FF24F46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EB50476-9AE4-477C-B6EA-53A80FF24F46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EB50476-9AE4-477C-B6EA-53A80FF24F46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EB50476-9AE4-477C-B6EA-53A80FF24F46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF2E20E1-9015-4D8D-9972-90374CADD658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF2E20E1-9015-4D8D-9972-90374CADD658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF2E20E1-9015-4D8D-9972-90374CADD658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF2E20E1-9015-4D8D-9972-90374CADD658}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2290C45-D9EB-4325-9959-9FBD2011FFAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2290C45-D9EB-4325-9959-9FBD2011FFAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2290C45-D9EB-4325-9959-9FBD2011FFAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2290C45-D9EB-4325-9959-9FBD2011FFAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28DE18DC-BEFE-483B-9C94-4C637D43D3C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28DE18DC-BEFE-483B-9C94-4C637D43D3C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28DE18DC-BEFE-483B-9C94-4C637D43D3C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28DE18DC-BEFE-483B-9C94-4C637D43D3C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DF2E20E1-9015-4D8D-9972-90374CADD658} = {68627445-415E-4C27-9D0E-8E53DBEA756C}
+		{D2290C45-D9EB-4325-9959-9FBD2011FFAD} = {68627445-415E-4C27-9D0E-8E53DBEA756C}
+	EndGlobalSection
+EndGlobal

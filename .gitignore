@@ -1,0 +1,35 @@
+﻿################################################################################
+# この .gitignore ファイルは Microsoft(R) Visual Studio によって自動的に作成されました。
+################################################################################
+
+/SakuraMacaron.Core/SakuraMacaron.Core/bin/Debug
+/SakuraMacaron.OfficeAddIn/SakuraMacaron.OfficeAddIn/bin/Debug
+/SakuraMacaron.OfficeAddIn/SakuraMacaron.OfficeAddIn/bin/Debug
+/SakuraMacaron.Core/SakuraMacaron.Core/obj/Debug
+/SakuraMacaron.OfficeAddIn/SakuraMacaron.OfficeAddIn/obj/Debug
+/SakuraMacaron.Core/SakuraMacaron.Core/bin/Release
+/SakuraMacaron.Core/SakuraMacaron.Core/obj/Release/TempPE
+/SakuraMacaron.Core/SakuraMacaron.Core/obj/Release
+/SakuraMacaron.OfficeAddIn/SakuraMacaron.OfficeAddIn/bin/Release
+/SakuraMacaron.OfficeAddIn/SakuraMacaron.OfficeAddIn/obj/Release/TempPE/My Project.Resources.Designer.vb.dll
+/SakuraMacaron.OfficeAddIn/SakuraMacaron.OfficeAddIn/obj/Release
+/SakuraMacaron.OfficeAddIn.Excel/.vs/SakuraMacaron.OfficeAddIn.Excel/v15
+/SakuraMacaron.OfficeAddIn.Excel/Sample.ExcelAddIn/obj/Debug
+/SakuraMacaron.OfficeAddIn.Excel/Sample.ExcelAddIn/obj/Release
+/SakuraMacaron.OfficeAddIn.Outlook/Sample.OutlookAddIn/obj
+/SakuraMacaron.OfficeAddIn.PowerPoint/Sample.PowerPointAddIn/obj
+/SakuraMacaron.OfficeAddIn.Project/.vs/SakuraMacaron.OfficeAddIn.Project/v14
+/SakuraMacaron.OfficeAddIn.Project/packages/Surviveplus.XmlCommentLocalization.1.0.6.2
+/SakuraMacaron.OfficeAddIn.Project/Sample.ProjectAddIn/bin/Debug
+/SakuraMacaron.OfficeAddIn.Project/Sample.ProjectAddIn/obj
+/SakuraMacaron.OfficeAddIn.Word/.vs/SakuraMacaron.OfficeAddIn.Word/v15
+/SakuraMacaron.OfficeAddIn.Word/Sample.WordAddIn/bin/Debug
+/SakuraMacaron.OfficeAddIn.Word/Sample.WordAddIn/obj
+/SakuraMacaron.OfficeAddIn.Word/SakuraMacaron.OfficeAddIn.Word/bin/Debug
+/SakuraMacaron.OfficeAddIn.Word/SakuraMacaron.OfficeAddIn.Word/obj
+/SakuraMacaron.OfficeAddIn.Word/packages/Surviveplus.XmlCommentLocalization.1.0.6.2
+/SakuraMacaron.OfficeAddIn.Word/Sample.WordAddIn/Sample.WordAddIn.vbproj.user
+/SakuraMacaron.OfficeAddIn.Project/Sample.ProjectAddIn/Sample.ProjectAddIn.vbproj.user
+/SakuraMacaron.OfficeAddIn.Project/SakuraMacaron.OfficeAddIn.Project/bin
+/SakuraMacaron.OfficeAddIn.Project/SakuraMacaron.OfficeAddIn.Project/obj
+/SakuraMacaron.OfficeAddIn.Project/SakuraMacaron.OfficeAddIn.Project/nupkg

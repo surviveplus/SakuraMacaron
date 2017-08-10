@@ -4,14 +4,22 @@
         Public Property ToolWindow As System.Windows.Window
         Public ReadOnly Property Control As T
 
-        Public Sub New(elementControl As T)
-
+        Public Sub New(elementControl As T, Optional title As String = "Tool Window")
             Me.Control = elementControl
+            Me.title = title
         End Sub
+
+        Private title As String
 
         Public Sub Show()
             If Me.ToolWindow Is Nothing Then
-                Me.ToolWindow = New System.Windows.Window With {.WindowStyle = System.Windows.WindowStyle.ToolWindow, .Content = Me.Control, .Width = 350, .Height = 400, .Title = "Sample ToolWindow", .WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner}
+                Me.ToolWindow = New System.Windows.Window With {
+                    .WindowStyle = System.Windows.WindowStyle.ToolWindow,
+                    .Content = Me.Control,
+                    .Width = 350,
+                    .Height = 400,
+                    .Title = Me.title,
+                    .WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner}
 
                 AddHandler Me.ToolWindow.Closed,
                     Sub(sender, e)

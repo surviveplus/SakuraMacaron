@@ -19,7 +19,8 @@ Public Class Ribbon1
         macaron.ReplaceSelectionText(
             Nothing,
             Sub(a)
-                a.Text = a.Text & " Hello!!"
+                a.InsertAfterText = " Hello!!"
+                a.InsertBeforeText = "⇒ "
             End Sub)
 
     End Sub

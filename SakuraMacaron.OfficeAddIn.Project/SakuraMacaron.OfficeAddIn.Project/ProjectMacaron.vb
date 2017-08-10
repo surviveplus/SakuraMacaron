@@ -47,8 +47,16 @@ Public Class ProjectMacaron
             Dim a As New TextActionsParameters With {.Text = t.Value}
             act(a)
             If a.IsCanceled Then Exit Sub
-            If a.IsSkipped = False AndAlso a.Text <> t.Value Then
-                t.Task.SetField(t.FieldId, a.Text)
+            If a.IsSkipped = False AndAlso
+                (a.Text <> t.Value OrElse
+                    String.IsNullOrEmpty(a.InsertBeforeText) = False OrElse
+                    String.IsNullOrEmpty(a.InsertAfterText) = False) Then
+
+                t.Task.SetField(
+                    t.FieldId,
+                    If(String.IsNullOrEmpty(a.InsertBeforeText) = False, a.InsertBeforeText, "") &
+                        a.Text &
+                        If(String.IsNullOrEmpty(a.InsertAfterText) = False, a.InsertAfterText, ""))
             End If
         Next
 

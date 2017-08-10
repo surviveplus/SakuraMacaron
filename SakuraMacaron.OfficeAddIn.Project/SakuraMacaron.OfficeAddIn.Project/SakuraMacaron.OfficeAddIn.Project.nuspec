@@ -3,7 +3,7 @@
  <metadata>
    <id>SakuraMacaron.OfficeAddIn.Project</id>
    <title>SakuraMacaron for Project AddIn(VSTO)</title>
-   <version>1.0.0-bata1</version>
+   <version>1.0.0-bata2</version>
    <authors>Surviveplus.net</authors>
    <description>Framework to create application extensions and macro.</description>
    <language>en-US</language>
